@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from airflow.models import DAG
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
+from airflow.utils.dates import days_ago
 
 default_args = {
     'sla': timedelta(hours=2)
@@ -9,8 +10,9 @@ default_args = {
 with DAG(
     'BigQuery_test',
     default_args=default_args,
-    start_date=datetime(2021, 8, 1),
-    schedule_interval='0 0 * * *'
+    start_date=days_ago(1),
+    schedule_interval='0 0 * * *',
+    tags=['Sushi_King']
 ) as dag:
     
     task_create_dataset = BigQueryCreateEmptyDatasetOperator(
