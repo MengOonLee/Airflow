@@ -1,6 +1,6 @@
 __pycache__/
 .ipynb_checkpoints/
 .GCP_SA/
-Data/
+data/
 venv/
 src/
