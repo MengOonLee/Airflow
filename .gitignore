@@ -1,6 +1,10 @@
 __pycache__/
 .ipynb_checkpoints/
-.GCP_SA/
 data/
 venv/
 src/
+dags/
+logs/
+plugins/
+*.yaml
+.env
