@@ -11,7 +11,7 @@ RUN apt-get update -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --chown=airflow:root ~/work/Airflow/dags /opt/airflow/dags
+COPY --chown=airflow:root ~/Work/Airflow/dags /opt/airflow/dags
 
 USER airflow
 
